@@ -78,7 +78,12 @@ wk.register({
 		"+[s]alesforce",
 		f = { "[f]etch org info", mode = "n" },
 		d = { "[d]eploy current file", mode = "n" },
-		r = { "[r]etrieve current file", mode = "n" },
+		-- r = { "[r]etrieve current file", mode = "n" },
+		r = { "+[r]etrieve",  
+      d = {"[d]elta", mode = "n"},
+      r = {"cu[r]rent component", mode = "n"},
+      p = {"[p]rofile", mode = "n"}
+    },
 		c = { "[c]hange org", mode = "n" },
 		q = { "[s]how/hide terminal", mode = "n" },
 		s = { "[s]et target_org current workspace", mode = "n" },
