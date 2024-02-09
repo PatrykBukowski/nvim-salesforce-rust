@@ -1,3 +1,4 @@
+require("core.plugin_config.wiki")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.o.relativenumber = true
