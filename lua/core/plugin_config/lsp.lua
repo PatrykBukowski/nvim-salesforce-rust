@@ -39,7 +39,6 @@ end)
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
 require("mason").setup({
 	"prettierd",
-	"stylua",
 })
 require("mason-lspconfig").setup({
 	ensure_installed = {
@@ -47,7 +46,6 @@ require("mason-lspconfig").setup({
 		"rust_analyzer",
 		"apex_ls",
 		"cssls",
-		--    'eslint',
 		"html",
 		"lwc_ls",
 		"visualforce_ls",
