@@ -2,9 +2,8 @@ local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
-	ensure_installed = { "prettierd", "stylua" },
+	ensure_installed = { "prettierd" },
 	sources = {
-		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.eslint,
 		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.prettierd.with({
