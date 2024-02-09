@@ -78,4 +78,16 @@ require("lazy").setup({
 	"tpope/vim-surround",
 	"rust-lang/rust.vim",
 	"folke/todo-comments.nvim",
-})
+  {
+    'vimwiki/vimwiki',
+    config = function()
+        vim.g.vimwiki_list = {
+            {
+                path = '/home/mtk/.vim/wiki',
+                syntax = 'markdown',
+                ext = '.md',
+            }
+        }
+    end
+}}
+)
