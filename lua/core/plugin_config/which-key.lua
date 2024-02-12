@@ -79,23 +79,26 @@ wk.register({
 		"+[s]alesforce",
 		f = { "[f]etch org info", mode = "n" },
 		d = { "[d]eploy current file", mode = "n" },
-		-- r = { "[r]etrieve current file", mode = "n" },
-		r = { "+[r]etrieve",  
+		R = { "+[R]etrieve",  
       d = {"[d]elta", mode = "n"},
       r = {"cu[r]rent component", mode = "n"},
       p = {"[p]rofile", mode = "n"}
     },
+    r = {"[r]etrieve current component", mode = "n"},
 		c = { "[c]hange org", mode = "n" },
 		q = { "[s]how/hide terminal", mode = "n" },
 		s = { "[s]et target_org current workspace", mode = "n" },
 		e = { "[e]nd scroll in terminal", mode = "n" },
-		t = {
-			"+[t]ests",
+		T = {
+			"+[T]ests",
 			a = { "[a]ll tests in current file", mode = "n" },
 			t = { "[t]est under cursor", mode = "n" },
 			o = { "[o]pen buf select" },
 			r = { "[r]epeat last tests" },
 		},
+    t = {
+      "[t]est under cursor", mode = "n"
+    },
 		a = { "+[a]dd", a = { "[a]pex class", mode = "n" }, l = { "[l]wc", mode = "n" } },
 	},
 })
