@@ -42,3 +42,8 @@ vim.keymap.set("n", "<leader>w", ":WhichKey<CR>")
 vim.keymap.set("n", "<leader>l", "gg=G:w<CR>")
 vim.keymap.set("n", "<leader>L", "gg=G")
 vim.keymap.set("n", "<leader>gr", ":!rm .git/index.lock<CR>")
+
+-- autocmd FileType cls setlocal commentstring=#\ %s
+vim.cmd [[
+    autocmd FileType apex setlocal commentstring=//\ %s
+]]
