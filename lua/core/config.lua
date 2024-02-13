@@ -1,4 +1,5 @@
-require("core.plugin_config.wiki")
+require("core.before.wiki")
+require("core.before.comment")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.o.relativenumber = true
@@ -42,7 +43,3 @@ vim.keymap.set("n", "<leader>w", ":WhichKey<CR>")
 vim.keymap.set("n", "<leader>l", "gg=G:w<CR>")
 vim.keymap.set("n", "<leader>L", "gg=G")
 vim.keymap.set("n", "<leader>gr", ":!rm .git/index.lock<CR>")
-
-vim.cmd [[
-    autocmd FileType apex setlocal commentstring=//\ %s
-]]
