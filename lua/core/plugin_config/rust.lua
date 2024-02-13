@@ -1,15 +1,4 @@
 local Terminal = require("toggleterm.terminal").Terminal
--- TODO: remove this when rust is configured
-
--- vim.keymap.set("n", "<leader>sf", require("sf.org").fetch)
--- vim.keymap.set("n", "<leader>sd", require("sf.term").saveAndPush)
--- vim.keymap.set("n", "<leader>sr", require("sf.term").retrieve)
-
--- vim.keymap.set("n", "<leader>sp", function()
--- 	vim.cmd(':!sfp profile:retrieve -n "' .. vim.fn.input("") .. '" -u ' .. require("sf.org").get_target_org())
--- end)
-
--- vim.keymap.set("n", "<leader>gp", ":Git push<CR>")
 vim.keymap.set("n", "<leader>cb", ":!cargo build<CR>")
 vim.keymap.set("n", "<leader>ch", ":!cargo check<CR>")
 vim.keymap.set("n", "<leader>cr", ":!cargo build --release<CR>")

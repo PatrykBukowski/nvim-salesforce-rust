@@ -69,13 +69,3 @@ lspconfig.apex_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
-
--- lspconfig.rust_analyzer.setup{
---  settings = {
---    ['rust-analyzer'] = {
---      diagnostics = {
---        enable = true,
---      }
---    }
---  }
--- }
