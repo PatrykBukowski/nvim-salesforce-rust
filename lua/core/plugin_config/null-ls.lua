@@ -10,11 +10,11 @@ null_ls.setup({
 			filetypes = { "apex" },
 			extra_args = { "--plugin=prettier-plugin-apex", "--write" },
 		}),
-		null_ls.builtins.diagnostics.pmd.with({
-			filetypes = { "apex" },
-			args = { "check", "--dir", "$ROOT", "--format", "json" },
-			extra_args = { "--rulesets", "apex_ruleset.xml" },
-		}),
+		-- null_ls.builtins.diagnostics.pmd.with({
+		-- 	filetypes = { "apex" },
+		-- 	args = { "check", "--dir", "$ROOT", "--format", "json" },
+		-- 	extra_args = { "--rulesets", "apex_ruleset.xml" },
+		-- }),
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
