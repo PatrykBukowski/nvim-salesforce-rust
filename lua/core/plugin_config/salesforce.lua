@@ -24,14 +24,13 @@ vim.keymap.set("n", "<leader>sal", function()
 			.. lwc_name
 			.. " --output-dir force-app/"
 			.. dir
-			.. "/lwc"
 	)
 end)
 
 vim.keymap.set("n", "<leader>saa", function()
 	local lwc_name = vim.fn.input("apex name: ")
 	local dir = vim.fn.input("force-app/")
-	vim.cmd(":!sf apex generate class --name " .. lwc_name .. " --output-dir force-app/" .. dir .. "/classes")
+	vim.cmd(":!sf apex generate class --name " .. lwc_name .. " --output-dir force-app/" .. dir)
 end)
 
 vim.keymap.set("n", "<leader>sRd", function()
