@@ -20,10 +20,8 @@ local cmp_colors_select = {
 
 vim.api.nvim_set_hl(0, "ThemePmenu", {
   bg = cmp_colors_completion[palette or "rose-pine"],
-  blend = 50,
   })
 vim.api.nvim_set_hl(0, "ThemePmenuSel", {
   bg = cmp_colors_select[palette or "rose-pine"],
   bold = true,
-  blend = 0,
   })
