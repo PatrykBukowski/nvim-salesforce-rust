@@ -53,6 +53,9 @@ wk.register({
 			b = { "[b]lame", mode = "n" },
 			r = { "[r]emove index.lock", mode = "n" },
 			p = { "[p]ush", mode = "n" },
+      P = { "fast [P]ush", mode = "n"},
+      C = { "fast [C]ommit", mode = "n"},
+      c = { "[c]heck difference in current file", mode = "n"},
 		},
 	},
 	J = {
