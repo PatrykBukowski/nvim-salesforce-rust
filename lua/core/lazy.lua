@@ -43,7 +43,7 @@ require("lazy").setup({
       "hrsh7th/cmp-nvim-lua",
     },
   },
-  "nvimtools/none-ls.nvim",
+  -- "nvimtools/none-ls.nvim",
   "MunifTanjim/prettier.nvim",
   {
     "xixiaofinland/sf.nvim",
