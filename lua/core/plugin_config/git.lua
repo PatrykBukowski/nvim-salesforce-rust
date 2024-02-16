@@ -8,6 +8,6 @@ end)
 
 vim.keymap.set("n", "<leader>gC", function()
   local message = vim.fn.input("Message: ")
-  vim.cmd('!git add . && git commit -m"' .. message)
+  vim.cmd('!git add . && git commit -m"' .. message .. '"')
 end)
 
