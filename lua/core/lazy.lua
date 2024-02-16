@@ -16,7 +16,7 @@ require("lazy").setup({
   "ellisonleao/gruvbox.nvim",
   "folke/tokyonight.nvim",
   { "catppuccin/nvim", name = "catppuccin" },
-  -- "onsails/lspkind.nvim",
+  "onsails/lspkind.nvim",
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
@@ -79,5 +79,7 @@ require("lazy").setup({
   "rust-lang/rust.vim",
   "folke/todo-comments.nvim",
   'vimwiki/vimwiki',
+  'mattn/emmet-vim',
+  'dcampos/cmp-emmet-vim',
 }
 )
