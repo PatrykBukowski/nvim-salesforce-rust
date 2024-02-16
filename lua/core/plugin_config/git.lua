@@ -5,3 +5,9 @@ vim.keymap.set("n", "<leader>gP", function()
   local message = vim.fn.input("Message: ")
   vim.cmd('!git add . && git commit -m"' .. message .. '" && git push')
 end)
+
+vim.keymap.set("n", "<leader>gC", function()
+  local message = vim.fn.input("Message: ")
+  vim.cmd('!git add . && git commit -m"' .. message)
+end)
+
