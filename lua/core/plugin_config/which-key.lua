@@ -2,7 +2,8 @@ local wk = require("which-key")
 
 wk.register({
 	["<leader>"] = {
-    w = { "wiki", mode = "n"},
+    z = { "[z]en mode", mode = "n"},
+    w = { "[w]iki", mode = "n"},
 		u = {
 			"[u]ndo tree",
 			mode = "n",
