@@ -21,6 +21,7 @@ require("lazy").setup({
   "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "nvim-treesitter/nvim-treesitter",
+  "Omochice/nvim-tree-docs",
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
@@ -82,5 +83,8 @@ require("lazy").setup({
   'mattn/emmet-vim',
   'dcampos/cmp-emmet-vim',
   {"folke/zen-mode.nvim", opts = {}},
-}
+{
+  "gbprod/yanky.nvim",
+  opts = {},
+}}
 )
