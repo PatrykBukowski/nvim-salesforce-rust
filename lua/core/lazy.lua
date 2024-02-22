@@ -21,7 +21,6 @@ require("lazy").setup({
   "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "nvim-treesitter/nvim-treesitter",
-  "Omochice/nvim-tree-docs",
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
@@ -44,7 +43,6 @@ require("lazy").setup({
       "hrsh7th/cmp-nvim-lua",
     },
   },
-  -- "nvimtools/none-ls.nvim",
   "MunifTanjim/prettier.nvim",
   {
     "xixiaofinland/sf.nvim",
@@ -73,7 +71,6 @@ require("lazy").setup({
   "lewis6991/gitsigns.nvim",
   "tpope/vim-commentary",
   { "zbirenbaum/copilot.lua", cmd = "Copilot", event = "InsertEnter" },
-  -- "zbirenbaum/copilot-cmp",
   { "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
   "hiphish/rainbow-delimiters.nvim",
   "tpope/vim-surround",
