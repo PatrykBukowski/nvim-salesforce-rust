@@ -18,14 +18,13 @@ vim.o.expandtab = true
 vim.o.swapfile = false
 vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.o.undofile = true
-
 vim.filetype.add({
-	extension = {
-		cls = "apex",
-		apex = "apex",
-		trigger = "apex",
-		cmp = "html",
-	},
+  extension = {
+    cls = "apex",
+    apex = "apex",
+    trigger = "apex",
+    cmp = "html",
+  },
 })
 
 -- keymaps
@@ -52,3 +51,25 @@ vim.keymap.set("n", "<leader>r", function()
 end)
 vim.keymap.set("n", "<C-p>", ":Telescope yank_history<CR>")
 vim.keymap.set("n", "<leader>f", ":!npx prettier --write %<CR>")
+
+-- TODO: fix this
+
+vim.keymap.set("n", "<leader>sL", function()
+  local font_size = vim.fn.input("font size (px) > ")
+  local xd_spacing = vim.fn.input("xd spacing > ")
+  local xd_height = vim.fn.input("xd line height > ")
+  local calc_height = (xd_height / font_size)
+  local calc_spacing = ((xd_spacing / 1000) * font_size)
+  print("font: " .. font_size .. "px/" .. calc_height .. ";")
+  vim.api.nvim_set_current_line("letter-spacing: " .. calc_spacing .. ";")
+end)
+
+
+vim.keymap.set("n", "<leader>sl", function()
+  local font_size = vim.fn.input("font size (px) > ")
+  local xd_spacing = vim.fn.input("xd spacing > ")
+  local xd_height = vim.fn.input("xd line height > ")
+  local calc_height = (xd_height / font_size)
+  local calc_spacing = ((xd_spacing / 1000) * font_size)
+  print("font: " .. font_size .. " |  height: " .. calc_height .. " | spacing: " .. calc_spacing)
+end)
