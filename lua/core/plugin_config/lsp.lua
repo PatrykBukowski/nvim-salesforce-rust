@@ -49,6 +49,7 @@ require("mason-lspconfig").setup({
 		"html",
 		"lwc_ls",
 		"visualforce_ls",
+    "jdtls",
 	},
 	handlers = {
 		lsp_zero.default_setup,
