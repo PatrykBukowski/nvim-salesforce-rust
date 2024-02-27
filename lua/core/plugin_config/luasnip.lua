@@ -18,3 +18,8 @@ ls.add_snippets("javascript", {
 ls.add_snippets("rust", {
 	snippet("clg", 'println!("$1")$0'),
 })
+
+ls.add_snippets("all", {
+  snippet("%%", "{% $1 \"$0\" %}"),
+  snippet("%%%", "{% block $1 %}\n$0\n{% endblock %}")
+})
