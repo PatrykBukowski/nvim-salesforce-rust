@@ -19,6 +19,7 @@ require("nvim-tree").setup({
 		api.config.mappings.default_on_attach(bufnr)
 
 		vim.keymap.set("n", "<leader>vv", api.node.open.vertical)
+		vim.keymap.set("n", "<leader>vh", api.node.open.horizontal)
 	end,
 })
 
