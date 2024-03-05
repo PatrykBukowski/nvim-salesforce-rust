@@ -70,3 +70,11 @@ lspconfig.apex_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
+
+lspconfig.tsserver.setup = {
+  settings = {
+    implicitProjectConfiguration = {
+      checkJs = true
+    }
+  }
+}
