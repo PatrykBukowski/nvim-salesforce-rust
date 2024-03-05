@@ -19,24 +19,23 @@ vim.o.swapfile = false
 vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.o.undofile = true
 vim.o.clipboard = "unnamedplus"
+vim.o.splitright = true
+vim.o.splitbelow = true
 vim.filetype.add({
-  extension = {
-    cls = "apex",
-    apex = "apex",
-    trigger = "apex",
-    cmp = "html",
-  },
+	extension = {
+		cls = "apex",
+		apex = "apex",
+		trigger = "apex",
+		cmp = "html",
+	},
 })
 
 -- keymaps
-
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("x", "<leader>p", '"_dP')
--- vim.keymap.set("n", "<leader>y", '"+y')
--- vim.keymap.set("v", "<leader>y", '"+y')
--- vim.keymap.set("n", "<leader>Y", '"+Y')
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
 vim.keymap.set("n", "<leader>w", ":WhichKey<CR>")
@@ -46,9 +45,7 @@ vim.keymap.set("n", "<leader>gr", ":!rm .git/index.lock<CR>")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 vim.keymap.set("n", "<leader>r", function()
-  local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
-  local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
-  vim.api.nvim_feedkeys(keys, "n", false)
+	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
+	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
+	vim.api.nvim_feedkeys(keys, "n", false)
 end)
--- vim.keymap.set("n", "<C-p>", ":Telescope yank_history<CR>")
-vim.keymap.set("n", "<leader>f", ":!npx prettier --write %<CR>")
