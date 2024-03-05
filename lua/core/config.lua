@@ -18,6 +18,7 @@ vim.o.expandtab = true
 vim.o.swapfile = false
 vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.o.undofile = true
+vim.o.clipboard = "unnamedplus"
 vim.filetype.add({
   extension = {
     cls = "apex",
@@ -33,9 +34,9 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("x", "<leader>p", '"_dP')
-vim.keymap.set("n", "<leader>y", '"+y')
-vim.keymap.set("v", "<leader>y", '"+y')
-vim.keymap.set("n", "<leader>Y", '"+Y')
+-- vim.keymap.set("n", "<leader>y", '"+y')
+-- vim.keymap.set("v", "<leader>y", '"+y')
+-- vim.keymap.set("n", "<leader>Y", '"+Y')
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
 vim.keymap.set("n", "<leader>w", ":WhichKey<CR>")
@@ -49,27 +50,5 @@ vim.keymap.set("n", "<leader>r", function()
   local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
   vim.api.nvim_feedkeys(keys, "n", false)
 end)
-vim.keymap.set("n", "<C-p>", ":Telescope yank_history<CR>")
+-- vim.keymap.set("n", "<C-p>", ":Telescope yank_history<CR>")
 vim.keymap.set("n", "<leader>f", ":!npx prettier --write %<CR>")
-
--- TODO: fix this
-
-vim.keymap.set("n", "<leader>sL", function()
-  local font_size = vim.fn.input("font size (px) > ")
-  local xd_spacing = vim.fn.input("xd spacing > ")
-  local xd_height = vim.fn.input("xd line height > ")
-  local calc_height = (xd_height / font_size)
-  local calc_spacing = ((xd_spacing / 1000) * font_size)
-  print("font: " .. font_size .. "px/" .. calc_height .. ";")
-  vim.api.nvim_set_current_line("letter-spacing: " .. calc_spacing .. ";")
-end)
-
-
-vim.keymap.set("n", "<leader>sl", function()
-  local font_size = vim.fn.input("font size (px) > ")
-  local xd_spacing = vim.fn.input("xd spacing > ")
-  local xd_height = vim.fn.input("xd line height > ")
-  local calc_height = (xd_height / font_size)
-  local calc_spacing = ((xd_spacing / 1000) * font_size)
-  print("font: " .. font_size .. " |  height: " .. calc_height .. " | spacing: " .. calc_spacing)
-end)
