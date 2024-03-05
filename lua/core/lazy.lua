@@ -80,5 +80,6 @@ require("lazy").setup({
   'mattn/emmet-vim',
   'dcampos/cmp-emmet-vim',
   {"folke/zen-mode.nvim", opts = {}},
+  "ThePrimeagen/vim-be-good",
 }
 )
